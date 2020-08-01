@@ -7,6 +7,14 @@ package pokemonevcounter.gamemechanics;
 
 public interface EVMods {
 	
+	// Hard set: Sets stat value to passed-in value
+	public void hardSetHp(int newValue);
+	public void hardSetAtk(int newValue);
+	public void hardSetDef(int newValue);
+	public void hardSetSpAtk(int newValue);
+	public void hardSetSpDef(int newValue);
+	public void hardSetSpd(int newValue);
+	
 	// Battling: Increase base 1 EV per battle
 	public void battleUpHp();
 	public void battleUpAtk();
@@ -26,7 +34,7 @@ public interface EVMods {
 	
 	
 	// Vitamins: Increase 10 EVs per use
-	public void hp();
+	public void hpUp();
 	public void protein();
 	public void iron();
 	public void calcium();

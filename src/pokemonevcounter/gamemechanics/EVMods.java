@@ -7,6 +7,9 @@ package pokemonevcounter.gamemechanics;
 
 public interface EVMods {
 	
+	// Equips and Pokerus modify the EVs earned from battle
+	public void pokerus();
+	
 	// Hard set: Sets stat value to passed-in value
 	public void hardSetHp(int newValue);
 	public void hardSetAtk(int newValue);
@@ -14,6 +17,7 @@ public interface EVMods {
 	public void hardSetSpAtk(int newValue);
 	public void hardSetSpDef(int newValue);
 	public void hardSetSpd(int newValue);
+	
 	
 	// Battling: Increase base 1 EV per battle
 	public void battleUpHp();

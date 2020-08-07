@@ -5,6 +5,13 @@ public class PokemonG4 extends PokemonG3{
 	public PokemonG4(String n) {
 		super(n);
 	}
+	
+	
+	// CLASS METHODS
+	
+	public void equip(int id) {
+		this.equipment = id;
+	}
 
 	
 	// BATTLING
@@ -13,7 +20,6 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpHp() {
 		int gain = 1;
 		
-		// TODO: Copy over to other battle methods
 		// Macho Brace
 		if(this.equipment == 1) {
 			gain *= 2;
@@ -37,6 +43,10 @@ public class PokemonG4 extends PokemonG3{
 		}
 		else if(this.equipment == 7) {
 			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
+			gain *= 2;
 		}
 		
 		// TODO: Pokerus modifier
@@ -65,7 +75,32 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpAtk() {
 		int gain = 1;
 		
-		if(this.mBrace) {
+		// Macho Brace
+		if(this.equipment == 1) {
+			gain *= 2;
+		}
+		
+		// Power items
+		else if(this.equipment == 2) {
+			gain += 4;
+		}
+		else if(this.equipment == 3) {
+			this.atk += 4;
+		}
+		else if(this.equipment == 4) {
+			this.def += 4;
+		}
+		else if(this.equipment == 5) {
+			this.spAtk += 4;
+		}
+		else if(this.equipment == 6) {
+			this.spDef += 4;
+		}
+		else if(this.equipment == 7) {
+			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -93,7 +128,32 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpDef() {
 		int gain = 1;
 		
-		if(this.mBrace) {
+		// Macho Brace
+		if(this.equipment == 1) {
+			gain *= 2;
+		}
+		
+		// Power items
+		else if(this.equipment == 2) {
+			gain += 4;
+		}
+		else if(this.equipment == 3) {
+			this.atk += 4;
+		}
+		else if(this.equipment == 4) {
+			this.def += 4;
+		}
+		else if(this.equipment == 5) {
+			this.spAtk += 4;
+		}
+		else if(this.equipment == 6) {
+			this.spDef += 4;
+		}
+		else if(this.equipment == 7) {
+			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -121,7 +181,32 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpSpAtk() {
 		int gain = 1;
 		
-		if(this.mBrace) {
+		// Macho Brace
+		if(this.equipment == 1) {
+			gain *= 2;
+		}
+		
+		// Power items
+		else if(this.equipment == 2) {
+			gain += 4;
+		}
+		else if(this.equipment == 3) {
+			this.atk += 4;
+		}
+		else if(this.equipment == 4) {
+			this.def += 4;
+		}
+		else if(this.equipment == 5) {
+			this.spAtk += 4;
+		}
+		else if(this.equipment == 6) {
+			this.spDef += 4;
+		}
+		else if(this.equipment == 7) {
+			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -149,7 +234,32 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpSpDef() {
 		int gain = 1;
 		
-		if(this.mBrace) {
+		// Macho Brace
+		if(this.equipment == 1) {
+			gain *= 2;
+		}
+		
+		// Power items
+		else if(this.equipment == 2) {
+			gain += 4;
+		}
+		else if(this.equipment == 3) {
+			this.atk += 4;
+		}
+		else if(this.equipment == 4) {
+			this.def += 4;
+		}
+		else if(this.equipment == 5) {
+			this.spAtk += 4;
+		}
+		else if(this.equipment == 6) {
+			this.spDef += 4;
+		}
+		else if(this.equipment == 7) {
+			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -177,7 +287,32 @@ public class PokemonG4 extends PokemonG3{
 	public void battleUpSpd() {
 		int gain = 1;
 		
-		if(this.mBrace) {
+		// Macho Brace
+		if(this.equipment == 1) {
+			gain *= 2;
+		}
+		
+		// Power items
+		else if(this.equipment == 2) {
+			gain += 4;
+		}
+		else if(this.equipment == 3) {
+			this.atk += 4;
+		}
+		else if(this.equipment == 4) {
+			this.def += 4;
+		}
+		else if(this.equipment == 5) {
+			this.spAtk += 4;
+		}
+		else if(this.equipment == 6) {
+			this.spDef += 4;
+		}
+		else if(this.equipment == 7) {
+			this.spd += 4;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		

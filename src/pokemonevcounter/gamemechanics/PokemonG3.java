@@ -15,6 +15,7 @@ public class PokemonG3 implements EVMods {
 	protected String name;
 	
 	protected int equipment; // 0: N/A | 1: Macho Brace
+	protected boolean pokerus; // true if infected with Pokerus
 	
 
 	public PokemonG3(String n) {
@@ -48,13 +49,18 @@ public class PokemonG3 implements EVMods {
 	
 	// CLASS METHODS
 	
-	public void equip() {
+	private void equip() {
 		if(this.equipment > 0) {
 			this.equipment = 0;
 		}
 		else {
 			this.equipment = 1;
 		}
+	}
+	
+	@Override
+	public void pokerus() {
+		this.pokerus = !this.pokerus;
 	}
 	
 	
@@ -112,6 +118,10 @@ public class PokemonG3 implements EVMods {
 			gain *= 2;
 		}
 		
+		if(this.pokerus) {
+			gain *= 2;
+		}
+		
 		int diffVal = this.hp + gain - 255;
 		int diffTotal = this.totalEv + gain - 510;
 		
@@ -137,6 +147,10 @@ public class PokemonG3 implements EVMods {
 		int gain = 1;
 		
 		if(this.equipment > 0) {
+			gain *= 2;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -168,6 +182,10 @@ public class PokemonG3 implements EVMods {
 			gain *= 2;
 		}
 		
+		if(this.pokerus) {
+			gain *= 2;
+		}
+		
 		int diffVal = this.def + gain - 255;
 		int diffTotal = this.totalEv + gain - 510;
 		
@@ -193,6 +211,10 @@ public class PokemonG3 implements EVMods {
 		int gain = 1;
 		
 		if(this.equipment > 0) {
+			gain *= 2;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -224,6 +246,10 @@ public class PokemonG3 implements EVMods {
 			gain *= 2;
 		}
 		
+		if(this.pokerus) {
+			gain *= 2;
+		}
+		
 		int diffVal = this.spDef + gain - 255;
 		int diffTotal = this.totalEv + gain - 510;
 		
@@ -249,6 +275,10 @@ public class PokemonG3 implements EVMods {
 		int gain = 1;
 		
 		if(this.equipment > 0) {
+			gain *= 2;
+		}
+		
+		if(this.pokerus) {
 			gain *= 2;
 		}
 		
@@ -475,5 +505,4 @@ public class PokemonG3 implements EVMods {
 		this.totalEv += gain;
 		
 	}
-
 }

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PokemonEVCounter</string>
+    <string name="tab_text_1">Tracking</string>
+    <string name="tab_text_2">All Pokemon</string>
+
+
+</resources>
